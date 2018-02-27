@@ -1,0 +1,69 @@
+body{
+	background-color: #98fb98;
+	margin: 0;
+}
+*{
+	box-sizing: border-box;
+}
+/*Style ogólne dla sklepu*/
+#shop{
+	display: flex;
+	padding: 0 20px;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+/*Style ogólne dla kontenera zawierajacego obrazki*/
+.container{
+	margin: 0 10px;
+	flex: 1;
+	height:40vh;
+	background-color: #fff;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+/*Pierwszy contener*/
+#one-container{
+	background-image: url(../zdj-zad/product-1.jpg)
+}
+/*Drugi contener*/
+#two-container{
+	background-image: url(../zdj-zad/product-2.jpg)
+}
+/*Trzeci contener*/
+#three-container{
+	background-image: url(../zdj-zad/product-3.jpg)
+}
+/*Czwarty contener*/
+#four-container{
+	background-image: url(../zdj-zad/product-4.jpg)
+}
+/*style dla maski*/
+.mask{
+	position: absolute;
+	background-color: #ff6f00;
+	height: 40vh;
+	width: 100%;
+	opacity: 0;
+     transition: opacity .5s ease-out;	
+}
+/*Nakładamy maskę na produkt*/
+.container:hover .mask{
+	background-color: #ff6f00;
+	opacity: 0.8;
+}
+/*style dla font i dla linków*/
+.links{
+	display: block;
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	font-size: 70px;
+	color:#fff;
+	text-align: center;
+	top:50%;
+	left:50%;
+	text-decoration: none;
+	transform: translate(-50%,-50%);
+}

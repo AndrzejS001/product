@@ -1,55 +1,28 @@
-body{
-	background-color: #98fb98;
-	margin: 0;
+/*w rozdzielczości poniżej 992px produkty mają się wyświetlać w dwóch kolumnach, a poniżej 480px w jednej kolumnie */
+
+/*Rozdzielczość ponizej 992px*/
+@media all and (max-width: 991px){
+	#shop{
+		flex-wrap: wrap;
+		
+	}
+	.container{
+		flex-basis: 40%;
+		align-items: center;
+	}
+	
 }
-*{
-	box-sizing: border-box;
-}
-/*Style ogólne dla sklepu*/
-#shop{
-	display: flex;
-	padding: 0 20px;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-}
-/*Style ogólne dla kontenera zawierajacego obrazki*/
-.container{
-	margin: 0 10px;
-	flex: 1;
-	height:500px;
-	background-color: #fff;
-	background-size: cover;
-	background-position: center;
-	position: relative;
-}
-/*Pierwszy contener*/
-#one-container{
-	background-image: url(../zdj-zad/product-1.jpg)
-}
-/*Drugi contener*/
-#two-container{
-	background-image: url(../zdj-zad/product-2.jpg)
-}
-/*Trzeci contener*/
-#three-container{
-	background-image: url(../zdj-zad/product-3.jpg)
-}
-/*Czwarty contener*/
-#four-container{
-	background-image: url(../zdj-zad/product-4.jpg)
-}
-/*style dla maski*/
-.mask{
-	position: absolute;
-	background-color: #ff6f00;
-	height: 500px;
-	width: 100%;
-	opacity: 0;
-     transition: opacity .5s ease-out;	
-}
-/*Nakładamy maskę na produkt*/
-.container:hover .mask{
-	background-color: #ff6f00;
-	opacity: 0.8;
+
+/*Rodzielczość poniżej 480*/
+@media all and (max-width: 479px){
+	#shop{
+		flex-wrap: wrap;
+		
+	}
+	.container{
+		flex-basis: 100%;
+		align-items: center;
+		margin: 10px;
+	}
+	
 }
